@@ -11,4 +11,4 @@
 
 ## Credit
 
-Code referenced from [Markdown Support for Visual Studio Code](https://github.com/neilsustc/vscode-markdown).
+`src/formatting.ts` contains a simplified and modified version of `src/formatting.ts` in [Markdown Support for Visual Studio Code](https://github.com/neilsustc/vscode-markdown/blob/master/src/formatting.ts).
