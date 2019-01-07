@@ -1,0 +1,70 @@
+{
+	"name": "restructuredtext-shortcut",
+	"displayName": "restructuredtext-shortcut",
+	"description": "ReStructuredText Shortcut Support for Visual Studio Code",
+	"version": "0.0.1",
+	"publisher": "snowkylin",
+	"engines": {
+		"vscode": "^1.30.0"
+	},
+	"categories": [
+		"Other"
+	],
+    "keywords": [
+        "restructuredtext"
+    ],
+    "bugs": {
+        "url": "https://github.com/snowkylin/restructuredtext-shortcut/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/snowkylin/restructuredtext-shortcut"
+    },
+    "license": "MIT",
+	"activationEvents": [
+		"onLanguage:restructuredtext"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"keybindings": [
+            {
+                "command": "extension.toggleBold",
+                "key": "ctrl+b",
+                "mac": "cmd+b",
+                "when": "editorTextFocus && !editorReadonly && editorLangId == 'restructuredtext'"
+			},
+			{
+                "command": "extension.toggleItalic",
+                "key": "ctrl+i",
+                "mac": "cmd+i",
+                "when": "editorTextFocus && !editorReadonly && editorLangId == 'restructuredtext'"
+			},
+			{
+                "command": "extension.toggleInlineLiteral",
+                "key": "ctrl+`",
+                "mac": "cmd+`",
+                "when": "editorTextFocus && !editorReadonly && editorLangId == 'restructuredtext'"
+			},
+			{
+                "command": "extension.toggleLink",
+                "key": "ctrl+l",
+                "mac": "cmd+l",
+                "when": "editorTextFocus && !editorReadonly && editorLangId == 'restructuredtext'"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "npm run compile && node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"typescript": "^3.1.4",
+		"vscode": "^1.1.25",
+		"tslint": "^5.8.0",
+		"@types/node": "^8.10.25",
+		"@types/mocha": "^2.2.42"
+	}
+}
